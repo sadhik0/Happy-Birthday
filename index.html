@@ -38,6 +38,12 @@
     padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
     text-align:center;
   }
+  section.compact{
+    min-height:0;
+    padding-top:70px;
+    padding-bottom:70px;
+  }
+  .section-alt{background:var(--bg2); color:var(--text);}
   .reveal{
     opacity:0;
     transform:translateY(30px);
@@ -86,11 +92,11 @@
     font-size:15px; color:var(--text2); max-width:320px; margin:0 auto 60px;
   }
   .scroll-cue{
-    display:flex; flex-direction:column; align-items:center; gap:6px;
-    color:var(--text2); font-size:12px; letter-spacing:1px; text-transform:uppercase;
+    display:flex; flex-direction:column; align-items:center;
+    color:var(--text2);
   }
-  .scroll-cue .arrow{font-size:18px; animation:bob 2.4s ease-in-out infinite;}
-  @keyframes bob{0%,100%{transform:translateY(0); opacity:0.5;}50%{transform:translateY(8px); opacity:1;}}
+  .scroll-cue .arrow{font-size:22px; animation:bob 2.4s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0); opacity:0.4;}50%{transform:translateY(10px); opacity:0.9;}}
 
   /* Intro */
   #intro .line{
@@ -150,7 +156,7 @@
   /* Personal note */
   #note{background:var(--bg2);}
   #note h2{font-size:clamp(28px,7vw,40px); margin-bottom:30px;}
-  #note p{max-width:480px; font-size:16px; line-height:1.7; margin-bottom:20px; color:var(--text);}
+  #note p{max-width:480px; font-size:18px; line-height:1.7; margin-bottom:20px; color:var(--text);}
   #note .final-name{margin-top:20px; font-size:clamp(26px,6vw,36px);}
 
   /* Future wishes */
@@ -195,19 +201,27 @@
 <section id="hero">
   <div class="symbol">✦</div>
   <div class="kicker reveal">A little something for you.</div>
-  <h1 class="reveal" id="heroName">Happy Birthday, Friend</h1>
-  <p class="subtitle reveal">A small digital wish, made with good intentions.</p>
+  <h1 class="reveal" id="heroName">Happy Birthday, Helan</h1>
+  <p class="subtitle reveal">A small digital wish 🩷</p>
   <div class="scroll-cue">
-    <span>Scroll slowly</span>
     <span class="arrow">↓</span>
   </div>
 </section>
 
 <!-- INTRO -->
-<section id="intro">
+<section id="intro" class="compact section-alt">
   <h2 class="line reveal">Another year.</h2>
   <h2 class="line reveal">Another chapter.</h2>
   <p class="line muted reveal">And hopefully, many good things ahead.</p>
+</section>
+
+<!-- PERSONAL NOTE -->
+<section id="note" class="compact">
+  <h2 class="reveal">A Little Note</h2>
+  <p class="reveal">I didn't make this to change anything or ask for anything. I simply wanted to wish you a happy birthday in a way that felt a little more meaningful than a usual message.</p>
+  <p class="reveal">We've both grown and life has moved in different directions. Whatever the future holds, I'm genuinely grateful for the good memories and the lessons along the way.</p>
+  <p class="reveal">I hope this year brings you happiness, peace, success and plenty of moments worth remembering.</p>
+  <h2 class="final-name reveal" id="noteName">Happy Birthday, Friend.</h2>
 </section>
 
 <!-- PHOTO STORY -->
@@ -255,7 +269,7 @@
 </section>
 
 <!-- LIFE LESSONS + FUTURE WISHES (merged) -->
-<section id="lessons">
+<section id="lessons" class="compact">
   <h2 class="reveal">What Life Teaches Us</h2>
   <div class="cards">
     <div class="card reveal">
@@ -294,15 +308,6 @@
       <p>May whatever comes next be good to you.</p>
     </div>
   </div>
-</section>
-
-<!-- PERSONAL NOTE -->
-<section id="note">
-  <h2 class="reveal">A Little Note</h2>
-  <p class="reveal">I didn't make this to change anything or ask for anything. I simply wanted to wish you a happy birthday in a way that felt a little more meaningful than a usual message.</p>
-  <p class="reveal">We've both grown and life has moved in different directions. Whatever the future holds, I'm genuinely grateful for the good memories and the lessons along the way.</p>
-  <p class="reveal">I hope this year brings you happiness, peace, success and plenty of moments worth remembering.</p>
-  <h2 class="final-name reveal" id="noteName">Happy Birthday, Friend.</h2>
 </section>
 
 <!-- FINAL CINEMATIC -->
