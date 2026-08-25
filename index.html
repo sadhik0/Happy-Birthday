@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Happy Birthday Kichuu</title>
+<title>Happy Birthday</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FF617D;
-    --bg2:#FF8DA1;
-    --text:#242321;
-    --text2:#706B63;
-    --accent:#A67C52;
-    --accent-light:#D8C2A8;
-    --dark:#1E1D1B;
-    --dark-text:#F7F3EC;
+    --bg:#FF3558;
+    --bg2:#FF617D;
+    --text:#FFF6F3;
+    --text2:rgba(255,246,243,0.78);
+    --accent:#FFFFFF;
+    --accent-light:#FFD3DC;
+    --dark:#1D1F20;
+    --dark-text:#FFF6F3;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -55,17 +55,17 @@
   #progress{
     position:fixed; top:max(14px, env(safe-area-inset-top)); right:16px; z-index:20;
     font-size:12px; letter-spacing:1px; color:var(--text2);
-    background:rgba(247,243,236,0.7); backdrop-filter:blur(6px);
+    background:rgba(0,0,0,0.15); backdrop-filter:blur(6px);
     padding:6px 10px; border-radius:20px; font-variant-numeric:tabular-nums;
     transition:opacity 300ms ease;
   }
-  #progress.dark-mode{color:var(--dark-text); background:rgba(30,29,27,0.4);}
+  #progress.dark-mode{color:var(--dark-text); background:rgba(255,255,255,0.1);}
 
   /* Music toggle */
   #musicToggle{
     position:fixed; top:max(14px, env(safe-area-inset-top)); left:16px; z-index:20;
     width:36px; height:36px; border-radius:50%; border:1px solid var(--accent-light);
-    background:rgba(247,243,236,0.7); backdrop-filter:blur(6px);
+    background:rgba(0,0,0,0.15); backdrop-filter:blur(6px);
     color:var(--accent); font-size:14px; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
   }
@@ -131,7 +131,7 @@
 
   /* Dark reflection */
   .dark-section{background:var(--dark); color:var(--dark-text);}
-  .dark-section .line{font-size:clamp(26px,6.5vw,42px); margin:14px 0; max-width:500px;}
+  .dark-section .line{font-size:clamp(26px,6.5vw,42px); margin:14px 0; max-width:600px;}
   .dark-section .final-line{color:var(--accent-light);}
 
   /* Life lessons */
@@ -168,11 +168,6 @@
   #finale .line{font-size:clamp(28px,7.5vw,48px); margin:16px 0;}
   #finale .small{font-size:14px; color:var(--accent-light); margin-top:30px; font-family:'Inter',sans-serif;}
 
-  /* Ending */
-  #ending{min-height:40svh;}
-  #ending .symbol{font-size:18px; color:var(--accent); margin-bottom:14px;}
-  #ending p{font-size:13px; color:var(--text2); letter-spacing:0.5px;}
-
   @media (min-width:700px){
     section{padding-left:60px; padding-right:60px;}
     .photo-stage{max-width:460px;}
@@ -200,8 +195,8 @@
 <section id="hero">
   <div class="symbol">✦</div>
   <div class="kicker reveal">A little something for you.</div>
-  <h1 class="reveal" id="heroName">Happy Birthday, Helan</h1>
-  <p class="subtitle reveal">A small digital wish</p>
+  <h1 class="reveal" id="heroName">Happy Birthday, Friend</h1>
+  <p class="subtitle reveal">A small digital wish, made with good intentions.</p>
   <div class="scroll-cue">
     <span>Scroll slowly</span>
     <span class="arrow">↓</span>
@@ -223,29 +218,30 @@
   </div>
   <div class="photo-stage" id="photoStage">
     <div class="photo-card" data-index="0">
-      <img src="photo1.jpg" alt="A birthday memory" loading="eager">
+      <img src="photo1.jpeg" alt="A birthday memory" loading="eager">
     </div>
     <div class="photo-card" data-index="1">
-      <img src="photo2.jpg" alt="A birthday memory" loading="lazy">
+      <img src="photo2.jpeg" alt="A birthday memory" loading="lazy">
     </div>
     <div class="photo-card" data-index="2">
-      <img src="photo3.jpg" alt="A birthday memory" loading="lazy">
+      <img src="photo3.jpeg" alt="A birthday memory" loading="lazy">
     </div>
     <div class="photo-card" data-index="3">
-      <img src="photo4.jpg" alt="A birthday memory" loading="lazy">
+      <img src="photo4.jpeg" alt="A birthday memory" loading="lazy">
     </div>
     <div class="photo-card" data-index="4">
-      <img src="photo5.jpg" alt="A birthday memory" loading="lazy">
+      <img src="photo5.jpeg" alt="A birthday memory" loading="lazy">
     </div>
     <div class="photo-card" data-index="5">
-      <img src="photo6.jpg" alt="A birthday memory" loading="lazy">
+      <img src="photo6.jpeg" alt="A birthday memory" loading="lazy">
     </div>
     <div class="photo-card" data-index="6">
-      <img src="photo7.jpg" alt="A birthday memory" loading="lazy">
+      <img src="photo7.jpeg" alt="A birthday memory" loading="lazy">
     </div>
   </div>
   <div class="photo-counter" id="photoCounter">01 / 07</div>
   <div class="photo-quote" id="photoQuote">Some people simply make a moment brighter.</div>
+  <p style="font-size:12px; color:var(--text2); letter-spacing:0.5px; margin-top:18px;">Tap the photo for the next moment</p>
 </section>
 
 <!-- DARK REFLECTION -->
@@ -258,7 +254,7 @@
   <h2 class="line final-line reveal">That's not necessarily a bad thing.</h2>
 </section>
 
-<!-- LIFE LESSONS -->
+<!-- LIFE LESSONS + FUTURE WISHES (merged) -->
 <section id="lessons">
   <h2 class="reveal">What Life Teaches Us</h2>
   <div class="cards">
@@ -278,20 +274,8 @@
       <p>Some chapters are meant to be remembered, not repeated.</p>
     </div>
   </div>
-</section>
 
-<!-- PERSONAL NOTE -->
-<section id="note">
-  <h2 class="reveal">A Little Note</h2>
-  <p class="reveal">I didn't make this to change anything or ask for anything. I simply wanted to wish you a happy birthday in a way that felt a little more meaningful than a usual message.</p>
-  <p class="reveal">We've both grown and life has moved in different directions. Whatever the future holds, I'm genuinely grateful for the good memories and the lessons along the way.</p>
-  <p class="reveal">I hope this year brings you happiness, peace, success and plenty of moments worth remembering.</p>
-  <h2 class="final-name reveal" id="noteName">Happy Birthday, Kichuu</h2>
-</section>
-
-<!-- FUTURE WISHES -->
-<section id="wishes">
-  <h2 class="reveal">For Your Year Ahead</h2>
+  <h2 class="reveal" style="margin-top:64px;">For Your Year Ahead</h2>
   <div class="wish-grid">
     <div class="wish reveal">
       <div class="label">PEACE</div>
@@ -312,6 +296,15 @@
   </div>
 </section>
 
+<!-- PERSONAL NOTE -->
+<section id="note">
+  <h2 class="reveal">A Little Note</h2>
+  <p class="reveal">I didn't make this to change anything or ask for anything. I simply wanted to wish you a happy birthday in a way that felt a little more meaningful than a usual message.</p>
+  <p class="reveal">We've both grown and life has moved in different directions. Whatever the future holds, I'm genuinely grateful for the good memories and the lessons along the way.</p>
+  <p class="reveal">I hope this year brings you happiness, peace, success and plenty of moments worth remembering.</p>
+  <h2 class="final-name reveal" id="noteName">Happy Birthday, Friend.</h2>
+</section>
+
 <!-- FINAL CINEMATIC -->
 <section class="dark-section" id="finale">
   <h2 class="line reveal">Some memories stay.</h2>
@@ -321,16 +314,12 @@
   <p class="small reveal">Wishing you nothing but good things ahead.</p>
 </section>
 
-<!-- ENDING -->
-<section id="ending">
-  <div class="symbol">✦</div>
-</section>
-
 <script>
   // ============ CONFIG ============
   const CONFIG = {
-      name: "Helan",
-      birthday: "27 August 2002"
+      name: "Kichuu",
+      birthday: "27th August",
+      year: "2026"
   };
   // =================================
 
@@ -381,19 +370,22 @@
   setActive(0);
 
   const photoStage = document.getElementById('photoStage');
-  const photoSection = document.getElementById('photos');
 
-  // Scroll within photo section to change active card (non-hijacking, based on section scroll progress)
-  function updatePhotoFromScroll(){
-    const rect = photoSection.getBoundingClientRect();
-    const total = rect.height - window.innerHeight;
-    if (total <= 0) return;
-    const scrolled = Math.min(Math.max(-rect.top, 0), total);
-    const progress = scrolled / total;
-    const idx = Math.min(6, Math.max(0, Math.round(progress * 6)));
-    if (idx !== activeIndex) setActive(idx);
+  // Tap the stack to advance to the next photo (loops back to the first after the last)
+  photoStage.setAttribute('role','button');
+  photoStage.setAttribute('tabindex','0');
+  photoStage.setAttribute('aria-label','Tap to see the next photo');
+  function advancePhoto(){
+    const next = (activeIndex + 1) % cards.length;
+    setActive(next);
   }
-  window.addEventListener('scroll', updatePhotoFromScroll, { passive:true });
+  photoStage.addEventListener('click', advancePhoto);
+  photoStage.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      advancePhoto();
+    }
+  });
 
   // Dark section detection for progress indicator color
   const darkSections = document.querySelectorAll('.dark-section');
@@ -416,18 +408,38 @@
   }, { threshold:[0,0.5,1] });
   lightSections.forEach(s => lightObserver.observe(s));
 
-  // Music toggle (no file supplied by default; works only if user adds music.mp3)
+  // Music: attempt autoplay on load, fallback to manual tap if the browser blocks it
   const musicBtn = document.getElementById('musicToggle');
-  let audio = null;
+  const audio = new Audio('music.mp3');
+  audio.loop = true;
   let playing = false;
-  musicBtn.addEventListener('click', () => {
-    if (!audio){
-      audio = new Audio('music.mp3');
-      audio.loop = true;
-      audio.addEventListener('error', () => {
-        musicBtn.style.display = 'none';
-      });
-    }
+
+  audio.addEventListener('error', () => {
+    musicBtn.style.display = 'none';
+  });
+
+  function tryAutoplay(){
+    audio.play().then(() => {
+      playing = true;
+      musicBtn.textContent = '❚❚';
+    }).catch(() => {
+      // Autoplay blocked by browser — wait for the first tap anywhere to start it
+      playing = false;
+      musicBtn.textContent = '♪';
+      const startOnFirstTap = () => {
+        audio.play().then(() => {
+          playing = true;
+          musicBtn.textContent = '❚❚';
+        }).catch(() => {});
+        document.removeEventListener('click', startOnFirstTap);
+      };
+      document.addEventListener('click', startOnFirstTap, { once:true });
+    });
+  }
+  window.addEventListener('load', tryAutoplay);
+
+  musicBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     if (playing){
       audio.pause();
       musicBtn.textContent = '♪';
